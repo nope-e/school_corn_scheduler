@@ -1,0 +1,21 @@
+[package]
+name = "school_corn_scheduler"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+egui_extras = "0.33.3"
+env_logger = { version = "0.11.9" ,features = ["auto-color","humantime"]}
+egui = "0.33.0"
+eframe = { version = "0.33.0", default-features = true, features = [
+#    "default_fonts", # Embed the default egui fonts.
+#    "glow",          # Use the glow rendering backend. Alternative: "wgpu".
+##    "persistence",   # Enable restoring app state when restarting the app.
+#    "wayland",       # To support Linux (and CI)
+#    "x11",           # To support older Linux distributions (restores one of the default features)
+] }
+log = "0.4.27"
+
+# You only need serde if you want app persistence:
+serde = { version = "1.0.219", features = ["derive"] }
+tokio = { version = "1.50.0", features = ["rt", "rt-multi-thread", "macros","sync"] }
